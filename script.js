@@ -1,1 +1,3 @@
-console.log("KhetSaarthi loaded successfully!");
+function startJourney() {
+    alert("KhetSaarthi role selection coming next!");
+}

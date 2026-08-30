@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KhetSaarthi | Farmer Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🌾</span>
+            <span>Khet<span>Saarthi</span></span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#farm">My Farm</a>
+            <a href="#market">Market</a>
+            <a href="#knowledge">Knowledge</a>
+        </nav>
+
+        <div class="profile">
+            <div class="profile-icon">F</div>
+            <span>Farmer</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard">
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <div>
+                <span class="eyebrow">FARMER DASHBOARD</span>
+
+                <h1>
+                    Good morning, <span>Farmer.</span>
+                </h1>
+
+                <p>
+                    Here's what you need to know about your farm today.
+                </p>
+            </div>
+
+            <div class="date-card">
+                <span>Today</span>
+                <strong id="currentDate">30 August 2026</strong>
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK INSIGHTS ================= -->
+
+        <section class="insights">
+
+            <!-- CROP -->
+
+            <div class="insight-card">
+
+                <div class="card-top">
+                    <div class="card-icon">🌱</div>
+                    <span class="status">Recommended</span>
+                </div>
+
+                <h3>Crop Recommendation</h3>
+
+                <strong class="highlight">
+                    Rice
+                </strong>
+
+                <p>
+                    Suitable for your region and current conditions.
+                </p>
+
+                <button onclick="showMessage('Crop recommendation opened')">
+                    View recommendation →
+                </button>
+
+            </div>
+
+
+            <!-- FARM CONDITIONS -->
+
+            <div class="insight-card">
+
+                <div class="card-top">
+                    <div class="card-icon">💧</div>
+                    <span class="status">Monitoring</span>
+                </div>
+
+                <h3>Farm Conditions</h3>
+
+                <div class="condition-row">
+
+                    <div>
+                        <strong>64%</strong>
+                        <small>Soil Moisture</small>
+                    </div>
+
+                    <div>
+                        <strong>28°C</strong>
+                        <small>Temperature</small>
+                    </div>
+
+                </div>
+
+                <p>
+                    Conditions are currently suitable for cultivation.
+                </p>
+
+            </div>
+
+
+            <!-- WEATHER -->
+
+            <div class="insight-card">
+
+                <div class="card-top">
+                    <div class="card-icon">🌦️</div>
+                    <span class="status warning">Alert</span>
+                </div>
+
+                <h3>Climate & Risk</h3>
+
+                <strong class="highlight">
+                    Rain expected
+                </strong>
+
+                <p>
+                    Prepare your field for possible rainfall tomorrow.
+                </p>
+
+                <button onclick="showMessage('Weather information opened')">
+                    View weather →
+                </button>
+
+            </div>
+
+
+            <!-- MARKET -->
+
+            <div class="insight-card">
+
+                <div class="card-top">
+                    <div class="card-icon">📈</div>
+                    <span class="status">Market</span>
+                </div>
+
+                <h3>Market Information</h3>
+
+                <strong class="highlight">
+                    ₹2,350 / quintal
+                </strong>
+
+                <p>
+                    Current indicative price for your selected crop.
+                </p>
+
+                <button onclick="showMessage('Market information opened')">
+                    Find buyers →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FARM JOURNEY ================= -->
+
+        <section class="dashboard-section" id="farm">
+
+            <div class="section-title">
+
+                <div>
+                    <span class="eyebrow">YOUR FARM JOURNEY</span>
+
+                    <h2>
+                        From <span>seed to market.</span>
+                    </h2>
+                </div>
+
+                <button class="outline-btn">
+                    View Farm
+                </button>
+
+            </div>
+
+
+            <div class="journey">
+
+                <div class="journey-step active">
+
+                    <div class="journey-icon">🌱</div>
+
+                    <div>
+                        <strong>Growing</strong>
+                        <p>Crop planning & cultivation</p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-step">
+
+                    <div class="journey-icon">🌾</div>
+
+                    <div>
+                        <strong>Harvesting</strong>
+                        <p>Prepare for harvest</p>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-step">
+
+                    <div class="journey-icon">📈</div>
+
+                    <div>
+                        <strong>Selling</strong>
+                        <p>Connect with buyers</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMMENDATIONS ================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+                    <span class="eyebrow">SMART GUIDANCE</span>
+
+                    <h2>
+                        Today's <span>recommendations.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="recommendations">
+
+                <div class="recommendation">
+
+                    <div class="recommendation-icon">💧</div>
+
+                    <div>
+                        <h3>Check soil moisture</h3>
+
+                        <p>
+                            Monitor moisture levels before your next irrigation.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <div class="recommendation-icon">🌦️</div>
+
+                    <div>
+                        <h3>Prepare for rainfall</h3>
+
+                        <p>
+                            Rain is expected soon. Plan field activities accordingly.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <div class="recommendation-icon">📚</div>
+
+                    <div>
+                        <h3>Learn about your crop</h3>
+
+                        <p>
+                            Explore practical guidance for better crop management.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI ASSISTANT ================= -->
+
+        <section class="ai-card" id="knowledge">
+
+            <div class="ai-icon">🤖</div>
+
+            <div class="ai-content">
+
+                <span class="eyebrow">KHETSAARTHI AI</span>
+
+                <h2>
+                    Have a question about your farm?
+                </h2>
+
+                <p>
+                    Ask questions, understand your crops and get
+                    practical agricultural guidance.
+                </p>
+
+            </div>
+
+            <button onclick="showMessage('AI Assistant coming soon')">
+                Ask KhetSaarthi →
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌾 KhetSaarthi
+        </div>
+
+        <p>
+            Smart technology. Better agriculture. Stronger communities.
+        </p>
+
+        <div class="footer-bottom">
+            © 2026 CropSync. Farmer Dashboard.
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KhetSaarthi | Distributor Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="../../index.html" class="logo">
+            <span class="logo-icon">🌾</span>
+            <span>Khet<span>Saarthi</span></span>
+        </a>
+
+        <div class="dashboard-title">
+            Distributor Dashboard
+        </div>
+
+        <a href="../../profile.html" class="profile-btn">
+            Change Profile
+        </a>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+    <main class="dashboard">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+
+            <div>
+                <span class="tag">🚚 DISTRIBUTOR</span>
+
+                <h1>
+                    Welcome to your
+                    <span>dashboard.</span>
+                </h1>
+
+                <p>
+                    Discover available produce, connect directly with farmers
+                    and build a more efficient agricultural supply network.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK STATS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">🌾</span>
+                <div>
+                    <small>Available Produce</small>
+                    <h2>24</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🤝</span>
+                <div>
+                    <small>Farmer Connections</small>
+                    <h2>12</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <div>
+                    <small>Active Orders</small>
+                    <h2>08</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN FEATURES -->
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+                <span>SUPPLY NETWORK</span>
+
+                <h2>
+                    Find what you <span>need.</span>
+                </h2>
+
+                <p>
+                    Explore agricultural produce and connect with farmers
+                    based on availability and requirements.
+                </p>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🌾</div>
+
+                    <h3>Available Produce</h3>
+
+                    <p>
+                        Browse crops and agricultural produce currently
+                        available from connected farmers.
+                    </p>
+
+                    <button onclick="showMessage('Opening produce marketplace...')">
+                        Browse Produce →
+                    </button>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🤝</div>
+
+                    <h3>Connect with Farmers</h3>
+
+                    <p>
+                        Discover farmers directly and explore opportunities
+                        for procurement without unnecessary intermediaries.
+                    </p>
+
+                    <button onclick="showMessage('Opening farmer network...')">
+                        Find Farmers →
+                    </button>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">📦</div>
+
+                    <h3>Manage Orders</h3>
+
+                    <p>
+                        Keep track of your procurement requests, active orders
+                        and supply requirements in one place.
+                    </p>
+
+                    <button onclick="showMessage('Opening order management...')">
+                        View Orders →
+                    </button>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">📊</div>
+
+                    <h3>Market Insights</h3>
+
+                    <p>
+                        Use agricultural market information to understand
+                        demand, pricing and supply trends.
+                    </p>
+
+                    <button onclick="showMessage('Opening market insights...')">
+                        View Insights →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ACTIVITY -->
+        <section class="activity-section">
+
+            <div class="section-heading left">
+
+                <span>RECENT ACTIVITY</span>
+
+                <h2>
+                    Your <span>network.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity">
+                    <span class="activity-icon">🌾</span>
+
+                    <div>
+                        <h3>New produce available</h3>
+                        <p>Rice • 500 kg • West Bengal</p>
+                    </div>
+
+                    <span class="activity-status">
+                        Available
+                    </span>
+                </div>
+
+
+                <div class="activity">
+                    <span class="activity-icon">🤝</span>
+
+                    <div>
+                        <h3>New farmer connection</h3>
+                        <p>Farmer network updated</p>
+                    </div>
+
+                    <span class="activity-status">
+                        New
+                    </span>
+                </div>
+
+
+                <div class="activity">
+                    <span class="activity-icon">📦</span>
+
+                    <div>
+                        <h3>Order update</h3>
+                        <p>Procurement request #KS1024</p>
+                    </div>
+
+                    <span class="activity-status">
+                        Active
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🌾 KhetSaarthi
+        </div>
+
+        <p>
+            Smart technology. Better agriculture. Stronger communities.
+        </p>
+
+        <div class="footer-bottom">
+            © 2026 CropSync. Hackathon Prototype.
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

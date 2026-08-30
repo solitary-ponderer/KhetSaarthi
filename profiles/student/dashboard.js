@@ -1,0 +1,1 @@
+student: "profiles/student/dashboard.html"

@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f3;
+    color: #172018;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #dcefd9;
+    border-bottom: 1px solid #cbdcc8;
+
+    box-shadow: 0 3px 15px rgba(35, 75, 39, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span:last-child span {
+    color: #3c8c46;
+}
+
+.logo-icon {
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b554c;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #2f813c;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2f813c;
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 60px 7% 100px;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+.eyebrow {
+    color: #3b8744;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-top: 12px;
+}
+
+.welcome h1 span {
+    color: #398844;
+}
+
+.welcome p {
+    color: #687169;
+
+    margin-top: 10px;
+
+    font-size: 16px;
+}
+
+.date-card {
+    padding: 14px 18px;
+
+    background: white;
+
+    border: 1px solid #e0e6dc;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date-card span {
+    color: #7b847d;
+    font-size: 11px;
+}
+
+.date-card strong {
+    font-size: 13px;
+}
+
+
+/* ================= INSIGHT CARDS ================= */
+
+.insights {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 17px;
+
+    margin-bottom: 75px;
+}
+
+.insight-card {
+    background: white;
+
+    border: 1px solid #e0e6dc;
+    border-radius: 16px;
+
+    padding: 23px;
+
+    transition: 0.2s;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 30px rgba(39, 75, 43, 0.08);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f2e4;
+
+    border-radius: 11px;
+
+    font-size: 20px;
+}
+
+.status {
+    color: #3c8846;
+
+    background: #e8f3e5;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.status.warning {
+    color: #947027;
+    background: #f5efd9;
+}
+
+.insight-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.highlight {
+    display: block;
+
+    font-size: 20px;
+
+    color: #2f813c;
+
+    margin-bottom: 8px;
+}
+
+.insight-card p {
+    color: #6c756e;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    min-height: 38px;
+}
+
+.insight-card button {
+    border: none;
+    background: none;
+
+    color: #2f813c;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+}
+
+.condition-row {
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 10px;
+}
+
+.condition-row strong {
+    display: block;
+
+    font-size: 19px;
+}
+
+.condition-row small {
+    color: #7a837b;
+
+    font-size: 9px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.dashboard-section {
+    margin-bottom: 75px;
+}
+
+.section-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+
+    margin-top: 10px;
+}
+
+.section-title h2 span {
+    color: #398844;
+}
+
+
+/* ================= JOURNEY ================= */
+
+.journey {
+    display: flex;
+    align-items: center;
+
+    background: white;
+
+    border: 1px solid #e0e6dc;
+    border-radius: 18px;
+
+    padding: 30px 35px;
+}
+
+.journey-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    flex: 1;
+}
+
+.journey-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #edf3e9;
+
+    font-size: 21px;
+}
+
+.journey-step.active .journey-icon {
+    background: #dcefd9;
+}
+
+.journey-step strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.journey-step p {
+    color: #7a837b;
+
+    font-size: 11px;
+}
+
+.journey-line {
+    width: 70px;
+    height: 1px;
+
+    background: #d6dfd4;
+
+    margin: 0 20px;
+}
+
+
+/* ================= RECOMMENDATIONS ================= */
+
+.recommendations {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 17px;
+}
+
+.recommendation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: white;
+
+    border: 1px solid #e0e6dc;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    transition: 0.2s;
+}
+
+.recommendation:hover {
+    transform: translateY(-3px);
+}
+
+.recommendation-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f2e4;
+
+    border-radius: 10px;
+}
+
+.recommendation h3 {
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.recommendation p {
+    color: #737c75;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.arrow {
+    margin-left: auto;
+
+    color: #398844;
+
+    font-weight: 700;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.outline-btn {
+    padding: 10px 17px;
+
+    border: 1px solid #bfd0bd;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #2d6935;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.outline-btn:hover {
+    background: #eaf3e7;
+}
+
+
+/* ================= AI CARD ================= */
+
+.ai-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 30px 35px;
+
+    background: #244f2b;
+
+    border-radius: 20px;
+
+    color: white;
+}
+
+.ai-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #356d3e;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.ai-content {
+    flex: 1;
+}
+
+.ai-content .eyebrow {
+    color: #a9d8a9;
+}
+
+.ai-content h2 {
+    font-size: 22px;
+
+    margin: 7px 0;
+}
+
+.ai-content p {
+    color: #d2dfd3;
+
+    font-size: 13px;
+}
+
+.ai-card button {
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: white;
+
+    color: #2f813c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px 7% 22px;
+
+    background: #172d1a;
+
+    color: #d8e2d8;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer p {
+    margin-top: 9px;
+
+    color: #9ca99e;
+
+    font-size: 12px;
+}
+
+.footer-bottom {
+    margin-top: 28px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #304532;
+
+    color: #788479;
+
+    font-size: 11px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1000px) {
+
+    .insights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .recommendations {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .dashboard {
+        padding: 45px 5% 70px;
+    }
+
+    .welcome {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .insights {
+        grid-template-columns: 1fr;
+    }
+
+    .journey {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .journey-line {
+        width: 1px;
+        height: 25px;
+
+        margin: 0 0 0 24px;
+    }
+
+    .ai-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ai-card button {
+        margin-top: 5px;
+    }
+}
