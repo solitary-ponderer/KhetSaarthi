@@ -1,0 +1,35 @@
+Crop,Region,SoilType,WaterRequirement,AvgCostPerAcre,AvgProfitPerAcre,GrowingSeason,RiskLevel
+Wheat,Punjab,Loamy,Medium,18000,30000,Rabi,Low
+Rice,Punjab,Clayey,High,22000,26000,Kharif,Medium
+Cotton,Punjab,Loamy,Medium,25000,28000,Kharif,High
+Sugarcane,Punjab,Clayey,High,42000,45000,Annual,Medium
+Maize,Punjab,Loamy,Medium,15000,20000,Kharif,Low
+Wheat,Haryana,Loamy,Medium,17000,29000,Rabi,Low
+Rice,Haryana,Clayey,High,21000,25000,Kharif,Medium
+Mustard,Haryana,Loamy,Low,10000,18000,Rabi,Low
+Cotton,Haryana,Loamy,Medium,24000,27000,Kharif,High
+Sugarcane,Uttar Pradesh,Clayey,High,40000,42000,Annual,Medium
+Wheat,Uttar Pradesh,Loamy,Medium,15000,25000,Rabi,Low
+Rice,Uttar Pradesh,Clayey,High,19000,24000,Kharif,Medium
+Potato,Uttar Pradesh,Sandy Loam,Medium,45000,60000,Rabi,Medium
+Sugarcane,Maharashtra,Clayey,High,48000,50000,Annual,Medium
+Cotton,Maharashtra,Black Soil,Medium,26000,30000,Kharif,High
+Soybean,Maharashtra,Black Soil,Low,14000,22000,Kharif,Medium
+Onion,Maharashtra,Sandy Loam,Medium,35000,50000,Rabi,High
+Tomato,Maharashtra,Sandy Loam,Medium,50000,90000,Kharif,High
+Groundnut,Gujarat,Sandy,Low,20000,28000,Kharif,Medium
+Cotton,Gujarat,Black Soil,Medium,25000,29000,Kharif,High
+Sugarcane,Gujarat,Clayey,High,45000,47000,Annual,Medium
+Wheat,Gujarat,Loamy,Low,16000,24000,Rabi,Low
+Rice,West Bengal,Clayey,High,20000,26000,Kharif,Medium
+Jute,West Bengal,Clayey,High,18000,22000,Kharif,Medium
+Potato,West Bengal,Loamy,Medium,42000,55000,Rabi,Medium
+Chilli,Andhra Pradesh,Black Soil,Medium,55000,90000,Kharif,High
+Rice,Andhra Pradesh,Clayey,High,22000,28000,Kharif,Medium
+Groundnut,Andhra Pradesh,Sandy,Low,19000,26000,Kharif,Medium
+Ragi,Karnataka,Red Soil,Low,9000,16000,Kharif,Low
+Maize,Karnataka,Red Soil,Medium,14000,19000,Kharif,Low
+Sugarcane,Karnataka,Clayey,High,44000,46000,Annual,Medium
+Soybean,Madhya Pradesh,Black Soil,Low,13000,21000,Kharif,Medium
+Wheat,Madhya Pradesh,Black Soil,Low,14000,23000,Rabi,Low
+Gram,Madhya Pradesh,Black Soil,Low,11000,17000,Rabi,Low

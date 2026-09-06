@@ -1,0 +1,47 @@
+=== WHEAT ===
+Land Preparation: Plough the field 2-3 times to get fine tilth. Level the land properly for even irrigation. Apply well-rotted farmyard manure before the last ploughing.
+Sowing: Best sown mid-October to mid-November. Use certified seed at 40-50 kg per acre. Sow in rows 20-22 cm apart using a seed drill for uniform depth.
+Irrigation: Needs 4-6 irrigations. Critical stages are crown root initiation (20-25 days after sowing), tillering, flowering, and grain filling. Avoid water stagnation.
+Fertilizer: Apply recommended NPK based on soil test, typically split nitrogen dose - half at sowing, half at first irrigation. Apply phosphorus and potassium fully at sowing.
+Disease Management: Watch for yellow rust and loose smut. Use disease-resistant varieties and treat seed with fungicide before sowing. Monitor fields regularly during humid weather.
+Harvesting: Harvest when grain turns golden and hard, typically 120-150 days after sowing. Avoid delay to prevent shattering losses.
+
+=== RICE ===
+Land Preparation: Puddle the field with 2-3 ploughings under standing water for transplanted rice. Level well to maintain uniform water depth.
+Sowing: Raise nursery 25-30 days before transplanting. Transplant 2-3 seedlings per hill, spacing 20x15 cm. For direct-seeded rice, sow pre-germinated seeds directly.
+Irrigation: Maintain 2-5 cm standing water during vegetative stage. Drain field 10 days before harvest. Water is critical at flowering stage.
+Fertilizer: Apply nitrogen in 3 splits - basal, tillering, and panicle initiation. Apply full phosphorus and potash as basal dose.
+Disease Management: Watch for blast, bacterial leaf blight, and stem borer. Use resistant varieties, avoid excess nitrogen, and maintain field hygiene.
+Harvesting: Harvest when 80-85% of grains turn golden yellow, usually 25-35 days after flowering. Dry properly before storage.
+
+=== COTTON ===
+Land Preparation: Deep plough once, followed by 2 harrowings. Ensure good drainage since cotton is sensitive to waterlogging.
+Sowing: Sow after first monsoon showers, typically May-June. Use spacing of 90x60 cm to 60x30 cm depending on variety. Treat seeds with fungicide before sowing.
+Irrigation: Requires irrigation at flowering and boll development stages. Avoid water stress during flowering as it causes flower/boll shedding.
+Fertilizer: Apply nitrogen in split doses at sowing, squaring, and flowering. Apply full phosphorus and potash as basal dose.
+Disease Management: Monitor for bollworm, whitefly, and wilt. Use pheromone traps for pest monitoring and follow integrated pest management practices.
+Harvesting: Pick cotton in 3-4 rounds as bolls mature and open, typically starting 150-160 days after sowing.
+
+=== SUGARCANE ===
+Land Preparation: Deep plough 2-3 times. Prepare furrows 75-90 cm apart for planting setts.
+Sowing: Plant healthy 2-3 budded setts in furrows, typically February-March or September-October depending on region.
+Irrigation: Needs frequent irrigation, roughly every 7-10 days depending on soil and season. Critical stages are germination, tillering, and grand growth period.
+Fertilizer: Apply nitrogen in 3-4 splits over the growing season. Apply full phosphorus and potash as basal dose at planting.
+Disease Management: Watch for red rot and smut. Use disease-free setts and treat with fungicide before planting.
+Harvesting: Harvest at 10-12 months when sucrose content peaks, indicated by reduced leaf growth and cane hardening.
+
+=== SOYBEAN ===
+Land Preparation: Prepare fine seedbed with 2 ploughings. Ensure good drainage as soybean is sensitive to waterlogging.
+Sowing: Sow with onset of monsoon, typically June-July. Use spacing of 45x5 cm. Treat seed with Rhizobium culture for better nodulation.
+Irrigation: Mostly rainfed. If irrigation available, critical stages are flowering and pod filling.
+Fertilizer: Apply a starter dose of nitrogen and full phosphorus/potash at sowing since the crop fixes its own nitrogen after nodulation.
+Disease Management: Watch for yellow mosaic virus and stem fly. Control whitefly vectors and use resistant varieties.
+Harvesting: Harvest when pods turn brown and leaves start shedding, typically 90-110 days after sowing.
+
+=== MAIZE ===
+Land Preparation: Plough 2-3 times to fine tilth. Prepare ridges and furrows for better drainage and irrigation management.
+Sowing: Sow at onset of monsoon for kharif or October-November for rabi. Spacing of 60x20 cm. Seed rate around 8-10 kg per acre.
+Irrigation: Critical stages are knee-high, tasseling, and grain filling. Avoid moisture stress especially at flowering.
+Fertilizer: Apply nitrogen in 3 splits - basal, knee-high stage, and tasseling. Apply full phosphorus and potash as basal dose.
+Disease Management: Watch for fall armyworm and stalk borer. Monitor early and use recommended pesticides if infestation crosses threshold.
+Harvesting: Harvest when husk turns brown and grains harden, typically 90-110 days after sowing depending on variety.
