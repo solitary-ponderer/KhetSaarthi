@@ -1,0 +1,4 @@
+-- Data dump for table: geospatial_soil_location_master
+INSERT INTO "geospatial_soil_location_master" ("location_id", "state", "district", "block", "village", "region_id", "latitude", "longitude", "location_level") VALUES ('LOC-WB-PM-001', 'West Bengal', 'Paschim Mednipur', 'Garhbeta I', 'Amgaris', 'REG-WB-001', '22.8465° N', '87.3190° E', 'village');
+INSERT INTO "geospatial_soil_location_master" ("location_id", "state", "district", "block", "village", "region_id", "latitude", "longitude", "location_level") VALUES ('LOC-WB-PB-001', 'West Bengal', 'Purba Burdhaman', 'Memari II', 'Paharhati', 'REG-WB-002', '23.2431° N', '88.0992° E', 'village');
+INSERT INTO "geospatial_soil_location_master" ("location_id", "state", "district", "block", "village", "region_id", "latitude", "longitude", "location_level") VALUES ('LOC-WB-JA-001', 'West Bengal', 'Jalpaiguri', 'Dhupguri', 'Dakshin Altagram', 'REG-WB-003', '26.6081° N', '88.9467° E', 'village');
