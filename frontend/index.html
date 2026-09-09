@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,48 +12,85 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
 
         <div class="logo">
+
             <span class="logo-icon">🌾</span>
-            <span>Khet<span>Saarthi</span></span>
+
+            <span>
+                Khet<span>Saarthi</span>
+            </span>
+
         </div>
 
-        <nav>
 
-            <a href="#home">
-                <span class="nav-icon">⌂</span>
-                Home
+        <nav class="main-nav">
+
+            <!-- Sliding active indicator -->
+            <span class="nav-indicator"></span>
+
+
+            <a href="#home" class="nav-link active">
+
+                <img src="assests/icons/home.svg" alt="home icon">
+
+                <span>Home</span>
+
             </a>
 
-            <a href="#features">
-                <span class="nav-icon">✦</span>
-                Features
+
+            <a href="#features" class="nav-link">
+
+                <img src="assests/icons/features.svg" alt="features icon">
+
+                <span>Features</span>
+
             </a>
 
-            <a href="#how-it-works">
-                <span class="nav-icon">?</span>
-                How It Works
+
+            <a href="#how-it-works" class="nav-link">
+
+                <img src="assests/icons/question.svg" alt="question icon">
+
+                <span>How It Works</span>
+
             </a>
 
-            <a href="#about">
-                <span class="nav-icon">ⓘ</span>
-                About
+
+            <a href="#about" class="nav-link">
+
+                <img src="assests/icons/info.svg" alt="info icon">
+
+                <span>About</span>
+
             </a>
 
         </nav>
 
-        <!-- Takes user to profile selection -->
-        <a href="profile.html" class="nav-btn">
-            Get Started
+
+        <!-- Login -->
+
+        <a href="dashboard.html" class="nav-btn">
+
+            <img src="assests/icons/user.svg" alt="user icon">
+
+            <span>Login</span>
+
         </a>
 
     </header>
 
 
-    <!-- HERO -->
+
+    <!-- ================= MAIN CONTENT ================= -->
+
     <main>
+
+
+        <!-- ================= HERO ================= -->
 
         <section class="hero" id="home">
 
@@ -62,27 +100,27 @@
                     🌱 Technology for Smarter Agriculture
                 </div>
 
+
                 <h1>
-                    Empowering Farmers.<br>
-                    <span>Growing Tomorrow.</span>
+                    Smarter Farming.<br>
+                    <span>Better Decisions.</span><br>
+                    Better Tomorrow.
                 </h1>
+
 
                 <p>
                     KhetSaarthi brings the agricultural ecosystem together
-                    in one intelligent platform — connecting farmers with
-                    knowledge, technology, markets and the people who make
-                    agriculture work.
+                    in one intelligent platform, helping farmers make
+                    smarter decisions from growing to harvesting and selling.
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <!-- Detailed KhetSaarthi features page -->
-                    <a href="features.html" class="primary-btn">
-                        Explore KhetSaarthi →
-                    </a>
+                    <!-- Main entry point -->
 
-                    <a href="#features" class="secondary-btn">
-                        Discover Features
+                    <a href="dashboard.html" class="primary-btn">
+                        Join KhetSaarthi →
                     </a>
 
                 </div>
@@ -90,40 +128,72 @@
             </div>
 
 
+
+            <!-- HERO VISUAL -->
+
             <div class="hero-visual">
 
                 <div class="circle circle-one"></div>
+
                 <div class="circle circle-two"></div>
+
 
                 <div class="farm-card">
 
                     <div class="farm-top">
+
                         <span>🌾</span>
-                        <span class="live">● LIVE</span>
+
+                        <span class="live">
+                            ● LIVE
+                        </span>
+
                     </div>
 
-                    <h3>Smart Agriculture</h3>
+
+                    <h3>
+                        Smart Agriculture
+                    </h3>
+
 
                     <p>
                         Data-driven support across every stage
                         of the farming journey.
                     </p>
 
+
                     <div class="mini-stats">
 
                         <div>
+
                             <strong>🌱</strong>
-                            <small>Growing</small>
+
+                            <small>
+                                Growing
+                            </small>
+
                         </div>
 
+
                         <div>
+
                             <strong>🌾</strong>
-                            <small>Harvesting</small>
+
+                            <small>
+                                Harvesting
+                            </small>
+
                         </div>
 
+
                         <div>
+
                             <strong>📈</strong>
-                            <small>Selling</small>
+
+                            <small>
+                                Selling
+                            </small>
+
                         </div>
 
                     </div>
@@ -135,108 +205,169 @@
         </section>
 
 
-        <!-- FEATURES -->
-        <section class="features-section" id="features">
 
-            <div class="section-heading">
+        <!-- ================= FEATURES ================= -->
 
-                <span>WHAT KHETSAARTHI OFFERS</span>
+        <section class="section features-section" id="features">
+
+            <div class="section-heading center">
+
+                <p class="eyebrow">
+                    CORE CAPABILITIES
+                </p>
+
 
                 <h2>
-                    Everything you need to make
+                    Everything you need to make<br>
                     <span>better decisions.</span>
                 </h2>
 
+
                 <p>
-                    From choosing the right crop to reaching the right market,
-                    KhetSaarthi brings essential agricultural intelligence,
-                    tools and connections together in one platform.
+                    From understanding your soil to finding the right market,
+                    KhetSaarthi brings essential agricultural intelligence
+                    together in one platform.
                 </p>
 
             </div>
 
 
+
             <div class="feature-grid">
 
+
+                <!-- FEATURE 1 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🌱</div>
+                    <div class="feature-icon">
+                        🌱
+                    </div>
 
-                    <h3>Crop Recommendation</h3>
+
+                    <h3>
+                        Crop Recommendation
+                    </h3>
+
 
                     <p>
-                        Get crop suggestions based on regional,
-                        environmental and agricultural data.
+                        Get crop suggestions based on regional, environmental
+                        and agricultural data.
                     </p>
 
                 </div>
 
 
+
+                <!-- FEATURE 2 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🧭</div>
+                    <div class="feature-icon">
+                        📋
+                    </div>
 
-                    <h3>Personalised Farm Guidance</h3>
+
+                    <h3>
+                        Personalized Guidance
+                    </h3>
+
 
                     <p>
-                        Receive practical, stage-wise guidance
-                        tailored to your farm and its conditions.
+                        Receive farming guidance tailored to your crop,
+                        conditions and stage of cultivation.
                     </p>
 
                 </div>
 
 
+
+                <!-- FEATURE 3 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🌦️</div>
+                    <div class="feature-icon">
+                        🌦️
+                    </div>
 
-                    <h3>Climate & Risk Alerts</h3>
+
+                    <h3>
+                        Climate & Risk Alerts
+                    </h3>
+
 
                     <p>
-                        Stay informed about rainfall, extreme weather
-                        and environmental risks affecting your crops.
+                        Stay informed about weather, rainfall and potential
+                        risks that could affect your farming activities.
                     </p>
 
                 </div>
 
 
+
+                <!-- FEATURE 4 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🤝</div>
+                    <div class="feature-icon">
+                        📈
+                    </div>
 
-                    <h3>Direct Market Connect</h3>
+
+                    <h3>
+                        Direct Market Connection
+                    </h3>
+
 
                     <p>
-                        Connect farmers directly with distributors and
-                        buyers for better access to agricultural markets.
+                        Connect farmers directly with distributors and reduce
+                        unnecessary layers in the selling process.
                     </p>
 
                 </div>
 
 
+
+                <!-- FEATURE 5 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🛠️</div>
+                    <div class="feature-icon">
+                        🛠️
+                    </div>
 
-                    <h3>Smart Tools & Products</h3>
+
+                    <h3>
+                        Smart Tools & Products
+                    </h3>
+
 
                     <p>
-                        Discover modern agricultural tools and products
-                        suited to your farming needs and budget.
+                        Discover useful agricultural tools and products
+                        recommended according to your needs and budget.
                     </p>
 
                 </div>
 
 
+
+                <!-- FEATURE 6 -->
+
                 <div class="feature-card">
 
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon">
+                        🤖
+                    </div>
 
-                    <h3>AI-Powered Learning</h3>
+
+                    <h3>
+                        AI & Agricultural Learning
+                    </h3>
+
 
                     <p>
-                        Get intelligent assistance while exploring practical
-                        agricultural knowledge through digital learning.
+                        Get intelligent assistance while accessing educational
+                        resources to understand modern agriculture.
                     </p>
 
                 </div>
@@ -246,27 +377,43 @@
         </section>
 
 
-        <!-- HOW IT WORKS -->
+
+        <!-- ================= HOW IT WORKS ================= -->
+
         <section class="how-section" id="how-it-works">
 
             <div class="section-heading">
 
-                <span>HOW IT WORKS</span>
+                <span>
+                    HOW IT WORKS
+                </span>
+
 
                 <h2>
-                    Agriculture, made <span>smarter.</span>
+                    Agriculture, made
+                    <span>smarter.</span>
                 </h2>
 
             </div>
 
 
+
             <div class="steps">
+
+
+                <!-- STEP 1 -->
 
                 <div class="step">
 
-                    <div class="step-number">01</div>
+                    <div class="step-number">
+                        01
+                    </div>
 
-                    <h3>Choose Your Role</h3>
+
+                    <h3>
+                        Choose Your Role
+                    </h3>
+
 
                     <p>
                         Enter KhetSaarthi as a farmer, distributor,
@@ -276,11 +423,20 @@
                 </div>
 
 
+
+                <!-- STEP 2 -->
+
                 <div class="step">
 
-                    <div class="step-number">02</div>
+                    <div class="step-number">
+                        02
+                    </div>
 
-                    <h3>Access Intelligence</h3>
+
+                    <h3>
+                        Access Intelligence
+                    </h3>
+
 
                     <p>
                         Use the tools and information designed
@@ -290,11 +446,20 @@
                 </div>
 
 
+
+                <!-- STEP 3 -->
+
                 <div class="step">
 
-                    <div class="step-number">03</div>
+                    <div class="step-number">
+                        03
+                    </div>
 
-                    <h3>Make Better Decisions</h3>
+
+                    <h3>
+                        Make Better Decisions
+                    </h3>
+
 
                     <p>
                         Turn agricultural data and knowledge
@@ -308,17 +473,23 @@
         </section>
 
 
-        <!-- ABOUT -->
+
+        <!-- ================= ABOUT ================= -->
+
         <section class="about-section" id="about">
 
             <div class="about-content">
 
-                <span>OUR VISION</span>
+                <span>
+                    OUR VISION
+                </span>
+
 
                 <h2>
                     Building a connected
                     <span>agricultural ecosystem.</span>
                 </h2>
+
 
                 <p>
                     KhetSaarthi aims to bridge the gap between
@@ -327,7 +498,8 @@
                     a common digital platform.
                 </p>
 
-                <a href="profile.html" class="primary-btn">
+
+                <a href="dashboard.html" class="primary-btn">
                     Enter KhetSaarthi →
                 </a>
 
@@ -338,16 +510,20 @@
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <div class="footer-logo">
             🌾 KhetSaarthi
         </div>
 
+
         <p>
             Smart technology. Better agriculture. Stronger communities.
         </p>
+
 
         <div class="footer-bottom">
             © 2026 CropSync. Hackathon Prototype.
@@ -356,7 +532,11 @@
     </footer>
 
 
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
