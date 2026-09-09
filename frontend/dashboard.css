@@ -33,7 +33,7 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    background: #edf4e9;
+    background: rgba(155, 221, 159, 0.95);
     border-bottom: 1px solid #dce7d8;
 
     box-shadow: 0 3px 15px rgba(31, 73, 45, 0.08);

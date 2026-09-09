@@ -1,0 +1,1442 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f3;
+    color: #172018;
+}
+
+
+/* =========================================================
+   FARMER PAGE
+========================================================= */
+
+.farmer-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(155, 221, 159, 0.20),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(80, 150, 88, 0.10),
+            transparent 30%
+        ),
+        #f7f8f3;
+}
+
+
+/* =========================================================
+   SCREENS
+========================================================= */
+
+.farmer-screen {
+    display: none;
+
+    width: 100%;
+    max-width: 620px;
+
+    animation: screenIn 0.35s ease;
+}
+
+.farmer-screen.active {
+    display: block;
+}
+
+@keyframes screenIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.location-card {
+    width: 100%;
+
+    padding: 48px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(60, 120, 68, 0.12);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(35, 75, 39, 0.12),
+        0 5px 20px rgba(35, 75, 39, 0.05);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   LOCATION ICON
+========================================================= */
+
+.location-icon {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #e5f2e2;
+}
+
+.location-icon img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(42%)
+        sepia(34%)
+        saturate(900%)
+        hue-rotate(80deg)
+        brightness(88%)
+        contrast(90%);
+}
+
+
+/* =========================================================
+   FARM ICON
+========================================================= */
+
+.farm-icon {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #e5f2e2;
+
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   STATUS ICONS
+========================================================= */
+
+.status-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+.status-icon.success {
+    background: #e5f2e2;
+    color: #2f813c;
+}
+
+.status-icon.warning {
+    background: #edf0dc;
+    color: #71802e;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.eyebrow {
+    color: #3b8744;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.location-card h1 {
+    font-size: clamp(34px, 5vw, 48px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 18px;
+}
+
+.location-card h1 span {
+    color: #398844;
+}
+
+.description {
+    max-width: 470px;
+
+    margin: 0 auto 30px;
+
+    color: #667168;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: none;
+
+    padding: 15px 22px;
+
+    border-radius: 11px;
+
+    background: #2f813c;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #246a30;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(47, 129, 60, 0.20);
+}
+
+.primary-btn:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.text-btn {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #397c42;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.text-btn:hover {
+    color: #246a30;
+
+    text-decoration: underline;
+}
+
+.privacy-note {
+    margin-top: 22px;
+
+    color: #89928a;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 30px;
+
+    border: 4px solid #e1eee0;
+
+    border-top-color: #398844;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   GPS COORDINATES
+========================================================= */
+
+.coordinates {
+    max-width: 420px;
+
+    margin: -15px auto 30px;
+
+    padding: 13px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #edf5e9;
+
+    border: 1px solid #dce9d8;
+
+    border-radius: 11px;
+
+    text-align: left;
+
+    font-size: 11px;
+}
+
+.coordinates span {
+    color: #6d786f;
+}
+
+.coordinates strong {
+    color: #2f7138;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DETECTED CURRENT PLACE
+========================================================= */
+
+.detected-place {
+    max-width: 420px;
+
+    margin: -10px auto 24px;
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #edf5e9;
+
+    border: 1px solid #dce9d8;
+
+    border-radius: 11px;
+
+    text-align: left;
+}
+
+.detected-place span {
+    color: #6d786f;
+
+    font-size: 11px;
+}
+
+.detected-place strong {
+    color: #2f7138;
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   LOCATION DETAILS
+========================================================= */
+
+.location-details {
+    max-width: 420px;
+
+    margin: 25px auto 30px;
+
+    padding: 6px 18px;
+
+    background: #f5f8f2;
+
+    border: 1px solid #e1e9de;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 2px;
+
+    border-bottom: 1px solid #e2e9df;
+
+    font-size: 13px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span {
+    color: #7a847b;
+}
+
+.detail-row strong {
+    color: #26372a;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   MANUAL LOCATION FORM
+========================================================= */
+
+.manual-card {
+    text-align: left;
+}
+
+.manual-card .status-icon,
+.manual-card .eyebrow,
+.manual-card h1,
+.manual-card .description {
+    text-align: center;
+}
+
+
+/* =========================================================
+   FARM DETAILS CARD
+========================================================= */
+
+.farm-details-card {
+    text-align: left;
+}
+
+.farm-details-card .farm-icon,
+.farm-details-card .eyebrow,
+.farm-details-card h1,
+.farm-details-card > .description {
+    text-align: center;
+}
+
+.farm-details-card > .description {
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #354238;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   SELECT WRAPPER
+========================================================= */
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "⌄";
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 50%;
+
+    transform: translateY(-55%);
+
+    color: #4d6651;
+
+    font-size: 18px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+select {
+    width: 100%;
+
+    appearance: none;
+
+    padding: 14px 45px 14px 15px;
+
+    border: 1px solid #d4ded1;
+
+    border-radius: 11px;
+
+    background: #fbfcf9;
+
+    color: #26372a;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+select:focus {
+    border-color: #65a96e;
+
+    box-shadow:
+        0 0 0 3px rgba(65, 140, 74, 0.10);
+}
+
+select:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TEXT / NUMERIC INPUT
+========================================================= */
+
+input[type="text"] {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d4ded1;
+
+    border-radius: 11px;
+
+    background: #fbfcf9;
+
+    color: #26372a;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #65a96e;
+
+    box-shadow:
+        0 0 0 3px rgba(65, 140, 74, 0.10);
+}
+
+input[type="text"]::placeholder {
+    color: #8a948c;
+}
+
+
+/* =========================================================
+   BUDGET INPUT
+========================================================= */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.input-prefix {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #4d6651;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.input-wrapper input[type="text"] {
+    padding-left: 45px;
+}
+
+
+/* =========================================================
+   LAND SIZE
+========================================================= */
+
+.land-input {
+    display: grid;
+
+    grid-template-columns: 1fr 150px;
+
+    gap: 10px;
+}
+
+#land-size-input {
+    width: 100%;
+}
+
+.unit-wrapper select {
+    padding-right: 40px;
+}
+
+
+/* =========================================================
+   ESP32 DEVICE
+========================================================= */
+
+.device-card {
+    text-align: center;
+}
+
+.device-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #e5f2e2;
+
+    color: #2f813c;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #d7e9d4;
+}
+
+.device-status {
+    max-width: 420px;
+
+    margin: 0 auto 20px;
+
+    padding: 15px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #f5f8f2;
+
+    border: 1px solid #e1e9de;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #aeb7b0;
+}
+
+.device-status.connecting .status-dot {
+    background: #b8a64a;
+
+    animation: statusPulse 1s infinite;
+}
+
+.device-status.connected .status-dot {
+    background: #398844;
+
+    box-shadow:
+        0 0 0 4px rgba(57, 136, 68, 0.10);
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+}
+
+.device-status strong {
+    display: block;
+
+    color: #26372a;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.device-status > div > span {
+    display: block;
+
+    color: #7a847b;
+
+    font-size: 11px;
+}
+
+.sensor-readings {
+    max-width: 420px;
+
+    margin: 0 auto 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.sensor-item {
+    padding: 13px 14px;
+
+    background: #fbfcf9;
+
+    border: 1px solid #e1e9de;
+
+    border-radius: 11px;
+
+    text-align: left;
+}
+
+.sensor-item span {
+    display: block;
+
+    color: #7a847b;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+.sensor-item strong {
+    color: #2f7138;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PLAN GENERATION
+========================================================= */
+
+.processing-card {
+    text-align: center;
+}
+
+.processing-icon {
+    position: relative;
+
+    width: 76px;
+    height: 76px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e5f2e2;
+
+    color: #398844;
+
+    font-size: 25px;
+}
+
+.processing-ring {
+    position: absolute;
+
+    inset: 5px;
+
+    border: 3px solid #d1e5ce;
+
+    border-top-color: #398844;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+.progress-track {
+    width: 100%;
+
+    height: 8px;
+
+    margin: 25px auto 12px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e3ece1;
+}
+
+.progress-bar {
+    width: 0;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #398844;
+
+    transition: width 0.5s ease;
+}
+
+.processing-step {
+    color: #7a847b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CROP RESULTS
+========================================================= */
+
+.results-card {
+    max-width: 760px;
+}
+
+.podium {
+    min-height: 280px;
+
+    margin: 35px auto 30px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.podium-place {
+    width: 31%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.podium-crop-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 9px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf5e9;
+
+    font-size: 23px;
+}
+
+.podium-crown {
+    margin-bottom: 4px;
+
+    color: #8c7b32;
+
+    font-size: 18px;
+}
+
+.podium-rank {
+    color: #6f7c71;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5px;
+}
+
+.podium-place strong {
+    max-width: 150px;
+
+    color: #26372a;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    margin-bottom: 4px;
+}
+
+.podium-place small {
+    color: #398844;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.podium-block {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px 12px 0 0;
+
+    background: #e5f2e2;
+
+    color: #398844;
+
+    font-weight: 800;
+
+    font-size: 20px;
+}
+
+.first-block {
+    height: 115px;
+}
+
+.second-block {
+    height: 85px;
+}
+
+.third-block {
+    height: 65px;
+}
+
+.selected-crop-result {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+
+    padding: 18px 20px;
+
+    border-radius: 14px;
+
+    background: #f5f8f2;
+
+    border: 1px solid #e1e9de;
+}
+
+.result-label {
+    color: #7a847b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.selected-crop-result h3 {
+    color: #26372a;
+
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.selected-crop-result p:last-child {
+    color: #667168;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CROP ANALYSIS
+========================================================= */
+
+.analysis-card {
+    max-width: 680px;
+}
+
+.comparison-box {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    background: #f5f8f2;
+
+    border: 1px solid #e1e9de;
+
+    border-radius: 16px;
+
+    text-align: left;
+}
+
+.comparison-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #e1e9de;
+}
+
+.comparison-heading span {
+    color: #7a847b;
+
+    font-size: 12px;
+}
+
+.comparison-heading strong {
+    color: #26372a;
+
+    font-size: 15px;
+}
+
+.analysis-reasons {
+    padding-top: 5px;
+}
+
+.reason-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e1e9de;
+}
+
+.reason-item:last-child {
+    border-bottom: none;
+}
+
+.reason-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #e5f2e2;
+
+    font-size: 16px;
+}
+
+.reason-item strong {
+    display: block;
+
+    color: #354238;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.reason-item p {
+    color: #6f7a72;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   PERSONALISED PLAN
+========================================================= */
+
+.plan-card {
+    max-width: 700px;
+}
+
+.recommended-crop {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #edf5e9;
+
+    border: 1px solid #dce9d8;
+}
+
+.recommended-crop span {
+    display: block;
+
+    color: #6f7c71;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.recommended-crop strong {
+    display: block;
+
+    color: #2f7138;
+
+    font-size: 25px;
+
+    margin-bottom: 4px;
+}
+
+.recommended-crop small {
+    color: #667168;
+
+    font-size: 12px;
+}
+
+.plan-list {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+
+    text-align: left;
+}
+
+.plan-item {
+    display: flex;
+
+    gap: 14px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e1e9de;
+}
+
+.plan-item:last-child {
+    border-bottom: none;
+}
+
+.plan-number {
+    color: #398844;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    padding-top: 2px;
+}
+
+.plan-item strong {
+    display: block;
+
+    color: #354238;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.plan-item p {
+    color: #737e76;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .farmer-page {
+        padding: 25px 15px;
+    }
+
+    .location-card {
+        padding: 38px 25px;
+
+        border-radius: 22px;
+    }
+
+    .location-card h1 {
+        font-size: 34px;
+    }
+
+    .coordinates {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .coordinates strong {
+        white-space: normal;
+    }
+
+    .detected-place {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .detected-place strong {
+        text-align: left;
+    }
+
+    .detail-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .detail-row strong {
+        text-align: left;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .land-input {
+        grid-template-columns: 1fr 125px;
+    }
+
+    .sensor-readings {
+        grid-template-columns: 1fr;
+    }
+
+    .podium {
+        min-height: 235px;
+
+        gap: 6px;
+    }
+
+    .podium-place {
+        width: 33%;
+    }
+
+    .podium-place strong {
+        font-size: 12px;
+    }
+
+    .first-block {
+        height: 95px;
+    }
+
+    .second-block {
+        height: 72px;
+    }
+
+    .third-block {
+        height: 55px;
+    }
+
+    .comparison-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
