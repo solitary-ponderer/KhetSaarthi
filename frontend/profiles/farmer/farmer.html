@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KhetSaarthi | Farmer</title>
+
+    <link rel="stylesheet" href="farmer.css">
+</head>
+
+<body>
+
+    <main class="farmer-page">
+
+        <!-- =====================================================
+             LOCATION REQUEST
+        ====================================================== -->
+
+        <section class="farmer-screen active" id="location-request">
+
+            <div class="location-card">
+
+                <div class="location-icon">
+                    <img src="../../assests/icons/location.svg" alt="Location Icon">
+                </div>
+
+                <p class="eyebrow">
+                    WELCOME TO KHETSAARTHI
+                </p>
+
+                <h1>
+                    Let's find your
+                    <span>farming region.</span>
+                </h1>
+
+                <p class="description">
+                    Allow KhetSaarthi to detect your location so we can
+                    identify your supported agricultural region.
+                </p>
+
+                <button class="primary-btn" id="allow-location">
+                    <span>Detect My Location</span>
+                    <span>→</span>
+                </button>
+
+                <button class="text-btn" id="manual-location-btn">
+                    Select location manually
+                </button>
+
+                <p class="privacy-note">
+                    Your location is used only to identify your farming region.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCATION CHECKING
+        ====================================================== -->
+
+        <section class="farmer-screen" id="location-checking">
+
+            <div class="location-card">
+
+                <div class="loader"></div>
+
+                <p class="eyebrow">
+                    CHECKING LOCATION
+                </p>
+
+                <h1>
+                    Finding your
+                    <span>region...</span>
+                </h1>
+
+                <p class="description">
+                    We're checking whether your location is currently
+                    supported by KhetSaarthi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCATION FOUND
+        ====================================================== -->
+
+        <section class="farmer-screen" id="location-found">
+
+            <div class="location-card">
+
+                <div class="status-icon success">
+                    ✓
+                </div>
+
+                <p class="eyebrow">
+                    LOCATION DETECTED
+                </p>
+
+                <h1>
+                    You're in a
+                    <span>supported region.</span>
+                </h1>
+
+                <div class="coordinates">
+
+                    <span>
+                        📍 Your detected location
+                    </span>
+
+                    <strong id="found-coordinates">
+                        Detecting...
+                    </strong>
+
+                </div>
+
+                <div class="location-details">
+
+                    <div class="detail-row">
+                        <span>State</span>
+                        <strong id="found-state"></strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>District</span>
+                        <strong id="found-district"></strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Block</span>
+                        <strong id="found-block"></strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Village</span>
+                        <strong id="found-village"></strong>
+                    </div>
+
+                </div>
+
+                <button class="primary-btn" id="continue-found">
+                    <span>Continue</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCATION NOT FOUND / MANUAL SELECTION
+        ====================================================== -->
+
+        <section class="farmer-screen" id="manual-location">
+
+            <div class="location-card manual-card">
+
+                <div class="status-icon warning">
+                    !
+                </div>
+
+                <p class="eyebrow">
+                    LOCATION NOT SUPPORTED
+                </p>
+
+                <h1>
+                    Select your
+                    <span>region manually.</span>
+                </h1>
+
+                <div class="detected-place">
+
+                    <span>
+                        📍 Your current location
+                    </span>
+
+                    <strong id="detected-place-name">
+                        Detecting...
+                    </strong>
+
+                </div>
+
+                <p class="description">
+                    Your location is currently not registered in our
+                    supported regions. Please select your location
+                    manually to continue.
+                </p>
+
+                <div class="form-group">
+
+                    <label for="state-select">
+                        State
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="state-select">
+
+                            <option value="">
+                                Select State
+                            </option>
+
+                            <option value="West Bengal">
+                                West Bengal
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="district-select">
+                        District
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="district-select" disabled>
+
+                            <option value="">
+                                Select District
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-btn"
+                    id="continue-manual"
+                    disabled
+                >
+                    <span>Continue</span>
+                    <span>→</span>
+                </button>
+
+                <button
+                    class="text-btn"
+                    id="back-to-location"
+                >
+                    ← Try location detection again
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FARM & CROP DETAILS
+        ====================================================== -->
+
+        <section class="farmer-screen" id="farm-details">
+
+            <div class="location-card farm-details-card">
+
+                <div class="farm-icon">
+                    🌱
+                </div>
+
+                <p class="eyebrow">
+                    FARM DETAILS
+                </p>
+
+                <h1>
+                    Tell us about
+                    <span>your farm.</span>
+                </h1>
+
+                <p class="description">
+                    Provide a few details about your crop and farm so
+                    KhetSaarthi can create a personalized plan for you.
+                </p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="crop-select">
+                            Crop
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select id="crop-select">
+
+                                <option value="">
+                                    Select Crop
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="variety-select">
+                            Crop Variety
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select
+                                id="variety-select"
+                                disabled
+                            >
+
+                                <option value="">
+                                    Select Variety
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="budget-input">
+                        Budget
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-prefix">
+                            ₹
+                        </span>
+
+                        <input
+                            type="text"
+                            id="budget-input"
+                            inputmode="numeric"
+                            autocomplete="off"
+                            placeholder="Enter your budget"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="land-size-input">
+                        Land Size
+                    </label>
+
+                    <div class="land-input">
+
+                        <input
+                            type="text"
+                            id="land-size-input"
+                            inputmode="decimal"
+                            autocomplete="off"
+                            placeholder="Enter land size"
+                        >
+
+                        <div class="select-wrapper unit-wrapper">
+
+                            <select id="land-unit">
+
+                                <option value="">
+                                    Unit
+                                </option>
+
+                                <option value="hectare">
+                                    Hectare
+                                </option>
+
+                                <option value="acre">
+                                    Acre
+                                </option>
+
+                                <option value="square_meter">
+                                    Square Metre
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="irrigation-select">
+                        Irrigation
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="irrigation-select">
+
+                            <option value="">
+                                Select Irrigation Method
+                            </option>
+
+                            <option value="rainfed">
+                                Rainfed
+                            </option>
+
+                            <option value="canal">
+                                Canal Irrigation
+                            </option>
+
+                            <option value="tube_well">
+                                Tube Well
+                            </option>
+
+                            <option value="borewell">
+                                Borewell
+                            </option>
+
+                            <option value="drip">
+                                Drip Irrigation
+                            </option>
+
+                            <option value="sprinkler">
+                                Sprinkler Irrigation
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="harvest-month">
+                        Expected Harvest Month
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="harvest-month">
+
+                            <option value="">
+                                Select Month
+                            </option>
+
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="continue-farm-details"
+                    disabled
+                >
+                    <span>Continue</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FARM DETAILS COMPLETE
+        ====================================================== -->
+
+        <section class="farmer-screen" id="next-step">
+
+            <div class="location-card">
+
+                <div class="status-icon success">
+                    ✓
+                </div>
+
+                <p class="eyebrow">
+                    FARM DETAILS COMPLETE
+                </p>
+
+                <h1>
+                    You're ready to
+                    <span>continue.</span>
+                </h1>
+
+                <p
+                    class="description"
+                    id="selected-location-text"
+                >
+                    Your farm details have been saved.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    id="continue-next"
+                >
+                    <span>Continue</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESP32 DEVICE CONNECTION
+        ====================================================== -->
+
+        <section class="farmer-screen" id="device-connect">
+
+            <div class="location-card device-card">
+
+                <div class="device-icon">
+                    <span>ESP32</span>
+                </div>
+
+                <p class="eyebrow">
+                    SMART FARM SENSOR
+                </p>
+
+                <h1>
+                    Connect your
+                    <span>ESP32 device.</span>
+                </h1>
+
+                <p class="description">
+                    Connect your KhetSaarthi sensor device to collect
+                    real-time information about your farm environment.
+                </p>
+
+                <div class="device-status" id="device-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong id="device-status-title">
+                            Device not connected
+                        </strong>
+
+                        <span id="device-status-text">
+                            Connect your ESP32 to continue.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sensor-readings">
+
+                    <div class="sensor-item">
+                        <span>Temperature</span>
+                        <strong id="sensor-temperature">-- °C</strong>
+                    </div>
+
+                    <div class="sensor-item">
+                        <span>Humidity</span>
+                        <strong id="sensor-humidity">-- %</strong>
+                    </div>
+
+                    <div class="sensor-item">
+                        <span>Soil Moisture</span>
+                        <strong id="sensor-moisture">-- %</strong>
+                    </div>
+
+                    <div class="sensor-item">
+                        <span>Soil Temperature</span>
+                        <strong id="sensor-soil-temperature">-- °C</strong>
+                    </div>
+
+                    <div class="sensor-item">
+                        <span>Light Intensity</span>
+                        <strong id="sensor-light">-- lux</strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="connect-device"
+                >
+                    <span>Connect Device</span>
+                    <span>→</span>
+                </button>
+
+                <button
+                    class="text-btn"
+                    id="skip-device"
+                >
+                    Continue without device
+                </button>
+
+                <p class="privacy-note">
+                    Sensor data will be used to improve your farm recommendations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERSONALIZED PLAN GENERATION
+        ====================================================== -->
+
+        <section class="farmer-screen" id="plan-generation">
+
+            <div class="location-card processing-card">
+
+                <div class="processing-icon">
+
+                    <div class="processing-ring"></div>
+
+                    <span>✦</span>
+
+                </div>
+
+                <p class="eyebrow">
+                    KHETSAARTHI AI
+                </p>
+
+                <h1>
+                    Making your
+                    <span>personalised plan.</span>
+                </h1>
+
+                <p
+                    class="description"
+                    id="analysis-status"
+                >
+                    Analysing your farm conditions and sensor data.
+                </p>
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-bar"
+                        id="analysis-progress"
+                    ></div>
+
+                </div>
+
+                <p
+                    class="processing-step"
+                    id="analysis-step"
+                >
+                    Preparing your farm profile...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CROP RANKING
+        ====================================================== -->
+
+        <section class="farmer-screen" id="crop-results">
+
+            <div class="location-card results-card">
+
+                <p class="eyebrow">
+                    CROP ANALYSIS COMPLETE
+                </p>
+
+                <h1>
+                    Your farm's
+                    <span>best choices.</span>
+                </h1>
+
+                <p class="description">
+                    Based on your farm details, location and available
+                    sensor information, KhetSaarthi ranked the most suitable crops.
+                </p>
+
+
+                <div class="podium">
+
+                    <div class="podium-place second-place">
+
+                        <div class="podium-crop-icon">
+                            🌱
+                        </div>
+
+                        <span class="podium-rank">
+                            2ND
+                        </span>
+
+                        <strong id="rank-2-crop">
+                            --
+                        </strong>
+
+                        <small id="rank-2-score">
+                            --
+                        </small>
+
+                        <div class="podium-block second-block">
+                            2
+                        </div>
+
+                    </div>
+
+
+                    <div class="podium-place first-place">
+
+                        <div class="podium-crown">
+                            ★
+                        </div>
+
+                        <div class="podium-crop-icon">
+                            🌾
+                        </div>
+
+                        <span class="podium-rank">
+                            BEST
+                        </span>
+
+                        <strong id="rank-1-crop">
+                            --
+                        </strong>
+
+                        <small id="rank-1-score">
+                            --
+                        </small>
+
+                        <div class="podium-block first-block">
+                            1
+                        </div>
+
+                    </div>
+
+
+                    <div class="podium-place third-place">
+
+                        <div class="podium-crop-icon">
+                            🌿
+                        </div>
+
+                        <span class="podium-rank">
+                            3RD
+                        </span>
+
+                        <strong id="rank-3-crop">
+                            --
+                        </strong>
+
+                        <small id="rank-3-score">
+                            --
+                        </small>
+
+                        <div class="podium-block third-block">
+                            3
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="selected-crop-result"
+                    id="selected-crop-result"
+                >
+
+                    <p class="result-label">
+                        YOUR SELECTED CROP
+                    </p>
+
+                    <h3 id="selected-crop-name">
+                        --
+                    </h3>
+
+                    <p id="selected-crop-message">
+                        Analysing your selected crop...
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="view-crop-analysis"
+                >
+                    <span>See Crop Analysis</span>
+                    <span>→</span>
+                </button>
+
+                <button
+                    class="text-btn"
+                    id="scroll-to-plan"
+                >
+                    Scroll to personalised plan
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY SELECTED CROP IS NOT IDEAL
+        ====================================================== -->
+
+        <section class="farmer-screen" id="crop-analysis">
+
+            <div class="location-card analysis-card">
+
+                <p class="eyebrow">
+                    CROP ANALYSIS
+                </p>
+
+                <h1>
+                    See why your crop
+                    <span>isn't ideal.</span>
+                </h1>
+
+                <p class="description">
+                    KhetSaarthi compared your selected crop with the
+                    conditions of your farm.
+                </p>
+
+
+                <div class="comparison-box">
+
+                    <div class="comparison-heading">
+
+                        <span>
+                            Your selected crop
+                        </span>
+
+                        <strong id="analysis-selected-crop">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-reasons">
+
+                        <div class="reason-item">
+
+                            <div class="reason-icon">
+                                🌡
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Farm suitability
+                                </strong>
+
+                                <p id="reason-suitability">
+                                    Your farm conditions are being evaluated.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="reason-item">
+
+                            <div class="reason-icon">
+                                💧
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Water & irrigation
+                                </strong>
+
+                                <p id="reason-irrigation">
+                                    Your irrigation conditions are being evaluated.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="reason-item">
+
+                            <div class="reason-icon">
+                                💰
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Economic suitability
+                                </strong>
+
+                                <p id="reason-economic">
+                                    Your budget and expected returns are being evaluated.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="reason-item">
+
+                            <div class="reason-icon">
+                                ⚠
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Risk
+                                </strong>
+
+                                <p id="reason-risk">
+                                    Environmental and crop risks are being evaluated.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="go-to-plan"
+                >
+                    <span>View My Personalised Plan</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERSONALISED PLAN
+        ====================================================== -->
+
+        <section class="farmer-screen" id="personalised-plan">
+
+            <div class="location-card plan-card">
+
+                <p class="eyebrow">
+                    PERSONALISED PLAN
+                </p>
+
+                <h1>
+                    Your plan for
+                    <span id="plan-crop-name">--</span>
+                </h1>
+
+                <p class="description">
+                    A personalised cultivation plan based on your farm profile
+                    and the recommended crop.
+                </p>
+
+
+                <div class="recommended-crop">
+
+                    <span>
+                        RECOMMENDED CROP
+                    </span>
+
+                    <strong id="recommended-crop">
+                        --
+                    </strong>
+
+                    <small id="recommended-variety">
+                        --
+                    </small>
+
+                </div>
+
+
+                <div class="plan-list">
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Land Preparation
+                            </strong>
+
+                            <p>
+                                Prepare the soil according to the crop's requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Seed Selection
+                            </strong>
+
+                            <p>
+                                Use a suitable variety for your region and conditions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Fertilisation
+                            </strong>
+
+                            <p>
+                                Follow a nutrient plan suited to your soil and crop.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Irrigation
+                            </strong>
+
+                            <p>
+                                Maintain irrigation according to crop and weather conditions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            05
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Pest & Disease Management
+                            </strong>
+
+                            <p>
+                                Watch for common risks and take preventive action.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-item">
+
+                        <span class="plan-number">
+                            06
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Harvest & Selling
+                            </strong>
+
+                            <p>
+                                Plan the harvest window and prepare for market connection.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="proceed-with-crop"
+                >
+                    <span>Proceed with Crop</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="farmer.js"></script>
+
+</body>
+
+</html>
